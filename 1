@@ -5,15 +5,12 @@ arr.unshift(),assign second element to first, third element to
 second...)
 //**************************************************************//
 
-function myrecursivArr(arr){
-  let newArr=[ ]
+function myrecursivArr(arr, newArr=[]){
   if(arr.length<=1){
     return []
-  } 
-  myrecursivArr(arr.splice(0,1))
-  newArr.push(arr) 
-  
-  return newArr
-  
+  }
+   newArr.push(arr[1]) 
+  myrecursivArr(arr.splice(1),newArr)
+   return newArr
   } console.log(myrecursivArr([0,1,2,3,4,5,6]))
   //**************************************************************//
