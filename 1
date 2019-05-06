@@ -1,0 +1,19 @@
+1...
+Given an array. Write a recursive function that removes the
+first element and returns the given array. (without using
+arr.unshift(),assign second element to first, third element to
+second...)
+//**************************************************************//
+
+function myrecursivArr(arr){
+  let newArr=[ ]
+  if(arr.length<=1){
+    return []
+  } 
+  myrecursivArr(arr.splice(0,1))
+  newArr.push(arr) 
+  
+  return newArr
+  
+  } console.log(myrecursivArr([0,1,2,3,4,5,6]))
+  //**************************************************************//
