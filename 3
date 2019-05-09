@@ -1,0 +1,31 @@
+
+
+3. 
+Given a number. Write a function that calculates its sum of
+the digits and if that sum has more than 1 digit find the sum of
+digits of that number. Repeat that process if needed and return
+the result.
+/********************************************************************/
+
+function num(n){
+  if(n<0){
+    return n;
+  }
+  let k=n.toString()
+ let b=Array.from(k)
+ let e
+ 
+  let f= b.reduce( (sum, digit) => +sum + + digit) 
+  
+   if(f<10){
+    return f 
+   } let s=f.toString() 
+   e=Array.from(s) 
+   return num(e.reduce( (s, d) => +s + + d) )
+ 
+} console.log(num(15589787497))
+
+
+/**************************************************************************/
+
+
