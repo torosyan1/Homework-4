@@ -1,0 +1,22 @@
+/***************************************************************************/
+4. 
+Given an array and a number N.  Write a recursive
+function that rotates an array N places to the left. (Hint: to
+add element to the beginning use arr.unshift())
+
+
+function revers(arr, num) {
+		if(num != 0) {
+			if(num > 0) {
+				arr.push(arr.shift());
+				return revers(arr, --num);
+			} else {
+				arr.unshift(arr.pop());
+				return revers(arr, ++num);
+			}
+		}
+		return arr;
+	}
+
+revers([1, 5, 3, 7, 3, 6, 4, 8], 5);
+/*****************************************************************************************/
